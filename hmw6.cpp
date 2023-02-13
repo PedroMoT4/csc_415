@@ -9,12 +9,12 @@ CSC 415 - Homework 6
 #include <math.h>
 using namespace std;
 
-float fx(float n){
-    return pow(n, 2) - 6;
+float fx(float x){
+    return exp(-x)-x;
 }
 
-float f1x(float n){
-    return 2*n;
+float f1x(float x){
+    return -exp(-x)-1;
 }
 
 void newton(float tol){

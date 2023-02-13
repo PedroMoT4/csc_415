@@ -46,7 +46,7 @@ double f1xb(double x){
 
 void newtonB(double p0){
 
-    float h; 
+    float h;
     h = fxb(p0)/f1xb(p0);
     int i = 1;
 
