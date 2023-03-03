@@ -1,3 +1,9 @@
+/*
+Program 4: Steffensen's Method
+2/13/23
+Pedro Mota - Pledged
+*/
+
 #include <iostream>
 #include <math.h>
 #define TOL 0.00001
