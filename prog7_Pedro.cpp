@@ -13,9 +13,9 @@ using namespace std;
 double f(double t, double w, int option){
     
     if(option == 1){
-        return (w/t) - pow(2, (w/t));  
+        return (w/t) - pow((w/t), 2);  
     }else if(option == 2){
-        return 1 + w/t + pow(2, (w/t));
+        return 1 + w/t + pow((w/t), 2);
     }
 
 }
