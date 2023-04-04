@@ -10,23 +10,23 @@ Program 7: Euler's Method
 using namespace std;
 
 
-double f(double t, double w, int option){
+double f(double t, double w){
     
-    if(option == 1){
+    /* if(option == 1){
         return (w/t) - pow((w/t), 2);  
     }else if(option == 2){
         return 1 + w/t + pow((w/t), 2);
-    }
-
+    } */
+    return sin(w) + exp(-t);
 }
 
-void Euler(double a, double b, double h, double alpha, int p){
+void Euler(double a, double b, double h, double alpha){
     double n = (b - a)/h;
     double t = a;
     double w = alpha;
 
     for(int i = 1; i <= n; i++){
-        w = w + h * f(t, w, p);
+        w = w + h * f(t, w);
         t = a + i*h;
         cout << "t = " << t << '\n' << "w = " << w << endl;
     }
@@ -35,10 +35,10 @@ void Euler(double a, double b, double h, double alpha, int p){
 
 int main(){
     double a, b, h, alpha;
-    int p;
+    /* int p;
     cout << "What problem are you solving?" << endl << "1. y' = y/t - (y/t)^2" << endl
     << "2. y' = 1 + y/t +(y/t)^2\n";
-    cin >> p;
+    cin >> p; */
     cout << "Value of t0: ";
     cin >> a;
     cout << "Value of ti: ";
@@ -47,5 +47,5 @@ int main(){
     cin >> h;
     cout << "Initial condition: ";
     cin >> alpha;
-    Euler(a, b, h, alpha, p);
+    Euler(a, b, h, alpha);
 }
